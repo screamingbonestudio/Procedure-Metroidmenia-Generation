@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UIElements;
 using Random = UnityEngine.Random;
 
 public class SimpleRandomWalkMapGenerator : MonoBehaviour
@@ -24,11 +25,15 @@ public class SimpleRandomWalkMapGenerator : MonoBehaviour
     public void runProceduralGeneration()
     {
         HashSet<Vector2Int> floorPositions = runRandomWalk();
+        foreach(var position in floorPositions)
+        {
+            Debug.Log(position);
+        }
         tilemapVisualizer.Clear();
         tilemapVisualizer.paintFloorTile(floorPositions);
     }
 
-    private HashSet<Vector2Int> runRandomWalk()
+    protected HashSet<Vector2Int> runRandomWalk()
     {
         var currentPosition = startPosition;
         HashSet<Vector2Int> floorPositions = new HashSet<Vector2Int>();

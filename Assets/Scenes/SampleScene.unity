@@ -577,7 +577,7 @@ Tilemap:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: 0, y: 0, z: 0}
   m_Size: {x: 0, y: 0, z: 1}
-  m_TileAnchor: {x: 0, y: 0, z: 0}
+  m_TileAnchor: {x: 0.5, y: 0.5, z: 0.5}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
     e00: 1
@@ -839,7 +839,7 @@ MonoBehaviour:
   startPosition: {x: 0, y: 0}
   iterations: 1
   walkLength: 10
-  startRandomlyEachIteration: 1
+  startRandomlyEachIteration: 0
   tilemapVisualizer: {fileID: 589090346}
 --- !u!4 &1827396063
 Transform:

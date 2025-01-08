@@ -16,11 +16,11 @@ public class TilemapVisualizer : MonoBehaviour
         paintTiles(floorPositions, floorTilemap, floorTile);
     }
 
-    private void paintTiles(IEnumerable<Vector2Int> Positions, Tilemap Tilemap, TileBase Tile)
+    private void paintTiles(IEnumerable<Vector2Int> positions, Tilemap tilemap, TileBase tile)
     {
-        foreach (var position in Positions)
+        foreach (var position in positions)
         {
-            paintSingleTile(Tilemap, Tile, position);
+            paintSingleTile(tilemap, tile, position);
         }
     }
 
